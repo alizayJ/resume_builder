@@ -1,0 +1,177 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+}
+body {
+  background-color: aliceblue;
+  color: purple;
+  height: 100vh;
+}
+
+header {
+  background-color: purple;
+  color: aliceblue;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.logo{
+    margin-left: auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+.nav-links {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-links li {
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.245);
+  backdrop-filter: blur(20px);
+  width: 45%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1100;
+  display: none;
+  flex-direction: column;
+}
+.sidebar li {
+  width: 100%;
+  list-style: none;
+  color: purple;
+  margin: 50px 30px;
+}
+.sidebar li a {
+  text-decoration: none;
+  width: 100%;
+}
+.sidebar :hover {
+  background-color: rgba(89, 37, 211, 0.642);
+}
+#toggle-menu {
+  display: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+section {
+  padding: 100px 20px;
+  text-align: centre;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-section {
+  background-color: aliceblue;
+}
+.about-section h1,
+.about-section p {
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  opacity: 0; /* Start with the text invisible */
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* End with text fully visible */
+  }
+}
+
+.about-section p {
+  animation-delay: 2s; /* Wait 2 seconds before starting the animation for the description */
+}
+
+.portfolio-section {
+  background-color: aliceblue;
+}
+.portfolio-items {
+  text-align: center;
+}
+
+.portfolio-items a {
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+}
+.portfolio-items iframe {
+  margin: 10px 0;
+}
+
+.contact-section {
+  background-color: lavender;
+}
+.contact-section h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid darkmagenta;
+}
+
+form button {
+  background-color: purple;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: purple;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 786px) {
+  .hide_links {
+    display: none;
+  }
+  #toggle-menu {
+    display: block;
+  }
+  @media (max-width: 400px) {
+    .sidebar {
+      width: 100%;
+   
+    }
+  }
+}
